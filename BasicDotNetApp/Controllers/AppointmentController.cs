@@ -8,5 +8,9 @@ namespace BasicDotNetApp.Controllers
         {
             return View();
         }
+        public IActionResult Details(int id)
+        {
+            return Ok("Detail of ID: " + id);
+        }
     }
 }
