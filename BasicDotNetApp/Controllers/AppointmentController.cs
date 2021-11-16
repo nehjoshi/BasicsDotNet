@@ -11,6 +11,7 @@ namespace BasicDotNetApp.Controllers
         public IActionResult Details(int id)
         {
             return Ok("Detail of ID: " + id);
+            //Hello there world!
         }
     }
 }
