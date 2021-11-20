@@ -1,4 +1,5 @@
 ﻿using BasicDotNetApp.Data;
+using BasicDotNetApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BasicDotNetApp.Controllers
@@ -12,6 +13,11 @@ namespace BasicDotNetApp.Controllers
             _db = db;
         }
         public IActionResult Index()
+        {
+            IEnumerable<Item> objList = _db.Items;
+            return View(objList);
+        }
+        public IActionResult Create()
         {
             return View();
         }
